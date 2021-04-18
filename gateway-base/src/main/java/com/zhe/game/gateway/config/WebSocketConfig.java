@@ -1,5 +1,6 @@
 package com.zhe.game.gateway.config;
 
+import com.zhe.game.gateway.service.MsgService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
