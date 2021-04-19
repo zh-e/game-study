@@ -13,8 +13,10 @@ public class TestMsgLister {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TestMsgLister.class);
 
+    private static final String TOPIC = "test";
+
     @Async
-    @EventListener(classes = BaseMessage.class, condition = "#baseMessage.topic eq 'test'")
+    @EventListener(classes = BaseMessage.class, condition = "#baseMessage.topic eq '" + TOPIC + "'")
     public void eventLister(BaseMessage baseMessage) {
         LOGGER.info("TestMsgLister msg:{}", JSONObject.toJSONString(baseMessage));
 
